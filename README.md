@@ -10,8 +10,14 @@ API for Problog app, created using Laravel
 git clone https://github.com/madeaditya02/problog-api.git
 ```
 
-2. Create a mysql database in your local computer named `problog`
-3. Duplicate file `.env.example` and rename it to `.env` and set some configuration such as :
+2. Install dependencies
+
+```
+composer install
+```
+
+3. Create a mysql database in your local computer named `problog`
+4. Duplicate file `.env.example` and rename it to `.env` and set some configuration such as :
     - `APP_URL` set to `http://127.0.0.1:8000`
     - `DB_DATABASE` set to `problog`
     - Add the following configuration :
@@ -20,19 +26,19 @@ git clone https://github.com/madeaditya02/problog-api.git
         SANCTUM_STATEFUL_DOMAINS=localhost
         SESSION_DOMAIN=localhost
         ```
-4. Generate app key
+5. Generate app key
 
 ```
 php artisan key:generate
 ```
 
-5. Run migrations and seed
+6. Run migrations and seed
 
 ```
 php artisan migrate --seed
 ```
 
-6. Run app
+7. Run app
 
 ```
 php artisan serve
